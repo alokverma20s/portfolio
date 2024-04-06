@@ -3,22 +3,30 @@ import { AiFillEye, AiFillGithub } from "react-icons/ai";
 import { motion } from "framer-motion";
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { urlFor, client } from "../../client";
+import { images } from "../../constants";
 
 import "./Work.scss";
 
 const Work = () => {
   const [activeFilter, setActiveFilter] = useState("All");
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
-  const [works, setWorks] = useState([]);
+  // const [works, setWorks] = useState([]);
   const [filterWork, setFilterWork] = useState([]);
 
-  useEffect(() => {
-    const query = '*[_type == "works"]';
+  const works = [
+    {title:'Youtube Clone', description:'A Youtube Clone built with React JS', tags:["Rapid API","React JS"],projectLink:"https://yt-tube.netlify.app/",codeLink:"https://github.com/alokverma20s/YoutubeClone",  imgUrl:images.uTube},
+    {title:'TinDog', description:'This is like a dog tinder App', tags:["CSS","UI/UX", "HTML", "BOOTSTAP"],projectLink:"https://alokverma20s.github.io/tindog/",codeLink:"https://github.com/alokverma20s/tindog",  imgUrl:images.tinDog},
+    {title:'Simon Game', description:'This is JS Game', tags:["JS","Web Game", "HTML"],projectLink:"https://alokverma20s.github.io/Simon-Game/",codeLink:"https://github.com/alokverma20s/Simon-Game",  imgUrl:images.simonGame},
+    {title:'Simon Game', description:'This is JS Game', tags:["Node.js","Web App"],projectLink:"https://todolist-uxfo.onrender.com/",codeLink:"https://github.com/alokverma20s/toDoLists",  imgUrl:images.mongo},
+  ]
 
-    client.fetch(query).then((data) => {
-      setWorks(data);
-      setFilterWork(data);
-    });
+  useEffect(() => {
+  //   const query = '*[_type == "works"]';
+
+  //   client.fetch(query).then((data) => {
+  //     setWorks(data);
+      setFilterWork(works);
+  //   });
   }, []);
 
   const handleWorkFilter = (item) => {
@@ -64,7 +72,7 @@ const Work = () => {
         {filterWork.map((work, index) => (
           <div className="app__work-item app__flex" key={index}>
             <div className="app__work-img app__flex">
-              <img src={urlFor(work.imgUrl)} alt={work.title} />
+              <img src={work.imgUrl} alt={work.title} />
               <motion.div
                 whileHover={{ opacity: [0, 1] }}
                 transition={{

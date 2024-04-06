@@ -1,26 +1,41 @@
-import React, { useState, useEffect } from "react";
+// import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import ReactTooltip  from "react-tooltip";
 
 import { AppWrap, MotionWrap } from "../../wrapper";
-import { urlFor, client } from "../../client";
+// import { urlFor, client } from "../../client";
 import "./Skills.scss";
+import { images } from "../../constants";
 
 const Skills = () => {
-  const [experience, setExperience] = useState([]);
-  const [skills, setSkills] = useState([]);
-  useEffect(() => {
-    const query = '*[_type == "experiences"]';
-    const skillsQuery = '*[_type == "skills"]';
+  // const [experience, setExperience] = useState([]);
+  // const [skills, setSkills] = useState([]);
+  const skills = [
+    { name:"C++", icon:images.cpp, bgColor:"rgb(237, 242, 248)" },
+    { name:"Git", icon:images.git, bgColor:"rgb(237, 242, 248)" },
+    { name:"React", icon:images.react, bgColor:"rgb(237, 242, 248)" },
+    { name:"Next js", icon:images.next, bgColor:"rgb(237, 242, 248)" },
+    { name:"Redux", icon:images.redux, bgColor:"rgb(237, 242, 248)" },
+    { name:"Node js", icon:images.node, bgColor:"rgb(237, 242, 248)" },
+  ]
 
-    client.fetch(query).then((data) => {
-      setExperience(data);
-    });
+  const experience = [
+    { year:'2024', works:[{ name:"Next js",company:"N/A", desc:"I works on Next js" }]},
+    { year:'2023', works:[{ name:"Backend",company:"N/A", desc:"I works on Node js" },{name:"DSA", company:"N/A", desc:"I solving problems" }]},
+    { year:'2022', works:[{ name:"Frontend",company:"N/A", desc:"I am a React" }]},
+  ]
+  // useEffect(() => {
+  //   const query = '*[_type == "experiences"]';
+  //   const skillsQuery = '*[_type == "skills"]';
 
-    client.fetch(skillsQuery).then((data) => {
-      setSkills(data);
-    });
-  }, []);
+  //   client.fetch(query).then((data) => {
+  //     setExperience(data);
+  //   });
+
+  //   client.fetch(skillsQuery).then((data) => {
+  //     setSkills(data);
+  //   });
+  // }, []);
   return (
     <>
       <h2 className="head-text">Skills & Experience</h2>
@@ -37,7 +52,7 @@ const Skills = () => {
                 className="app__flex"
                 style={{ backgroundColor: skill.bgColor }}
               >
-                <img src={urlFor(skill.icon)} alt={skill.name} />
+                <img src={skill.icon} alt={skill.name} />
               </div>
               <p className="p-tex">{skill.name}</p>
             </motion.div>

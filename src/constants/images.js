@@ -6,6 +6,7 @@ import css from '../assets/css.png';
 import figma from '../assets/figma.png';
 import flutter from '../assets/flutter.png';
 import git from '../assets/git.png';
+import next from '../assets/next-js.svg';
 import graphql from '../assets/graphql.png';
 import html from '../assets/html.png';
 import javascript from '../assets/javascript.png';
@@ -35,6 +36,13 @@ import nb from '../assets/nb.png';
 import skype from '../assets/skype.png';
 import spotify from '../assets/spotify.png';
 
+import uTube from '../assets/u-tube.png';
+import tinDog from '../assets/tinDog.jpg';
+import simonGame from '../assets/simonGame.png';
+import mongo from '../assets/mongo.jpg';
+
+import abhay from '../assets/abhay.jpg'
+
 export default { //eslint-disable-next-line
   email,
   mobile,
@@ -44,6 +52,7 @@ export default { //eslint-disable-next-line
   figma,
   flutter,
   git,
+  next,
   graphql,
   html,
   javascript,
@@ -69,4 +78,9 @@ export default { //eslint-disable-next-line
   nb,
   skype,
   spotify,
+  uTube,
+  tinDog,
+  simonGame,
+  mongo,
+  abhay,
 };
