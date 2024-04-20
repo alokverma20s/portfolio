@@ -24,6 +24,10 @@ import about02 from '../assets/about02.png';
 import about03 from '../assets/about03.png';
 import about04 from '../assets/about04.png';
 
+import mysql from '../assets/MySql.png';
+import bitbridge from '../assets/Bit-Bridge.png'
+import yoom from '../assets/Yoom.png'
+
 import profile from '../assets/profile.png';
 import circle from '../assets/circle.svg';
 import logo from '../assets/logo.png';
@@ -83,4 +87,7 @@ export default { //eslint-disable-next-line
   simonGame,
   mongo,
   abhay,
+  mysql,
+  bitbridge,
+  yoom
 };

@@ -8,10 +8,10 @@ import {images} from '../../constants';
 const About = () => {
     // const [abouts,  setAbouts]=useState([]);
     const abouts= [
-        {title: 'React Native Developer', description: 'I am a React Native developer with a passion for building beautiful and funtional Web apps', imgURL: images.about01},
-        {title: 'Frontend Developer', description: 'A Front-End Developer is someone who creates websites and web applications.', imgURL: images.about02},
-        {title: 'Web Developer', description: 'Writing well designed, testable, efficient code by using best software development practices', imgURL: images.about03},
-        {title: 'Backend Developer', description: 'I am a Backend developer with a passion for building beautiful and funtional Web apps', imgURL: images.about04}
+        {title: 'React Developer', description: 'React developer designs and builds interactive user interfaces, utilizing component-based architecture and state management for efficient, scalable web apps', imgURL: images.about01},
+        {title: 'Node.js Developer', description: 'Node.js developer engineers scalable, high-performance backends, leveraging JavaScript runtime to create server-side applications, APIs, and real-time systems efficiently.', imgURL: images.about04},
+        {title: 'Next.js Developer', description: 'Next.js developer crafts dynamic web apps with React, leveraging server-side rendering and seamless client-side navigation for optimal user experiences.', imgURL: images.about02},
+        {title: 'MySQL', description: 'MySQL developer designs and manages databases, optimizing performance and security for efficient storage and retrieval of data in web applications.', imgURL: images.mysql}
     ]
 
     // useEffect(()=>{

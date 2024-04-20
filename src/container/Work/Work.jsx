@@ -14,6 +14,8 @@ const Work = () => {
   const [filterWork, setFilterWork] = useState([]);
 
   const works = [
+    {title:'Bit-Bridge', description:'A coding Community web app for NITJ', tags:["React JS","Node JS", "Web App", "UI/UX"],projectLink:"https://bitbridge.netlify.app/",codeLink:"https://github.com/alokverma20s/Bit-Bridge",  imgUrl:images.bitbridge},
+    {title:'Yoom', description:'A fully functional video confrencing web app', tags:["Next JS","","Web App"],projectLink:"https://zoom-clone-eight-blond.vercel.app/",codeLink:"https://github.com/alokverma20s/zoom_clone",  imgUrl:images.yoom},
     {title:'Youtube Clone', description:'A Youtube Clone built with React JS', tags:["Rapid API","React JS"],projectLink:"https://yt-tube.netlify.app/",codeLink:"https://github.com/alokverma20s/YoutubeClone",  imgUrl:images.uTube},
     {title:'TinDog', description:'This is like a dog tinder App', tags:["CSS","UI/UX", "HTML", "BOOTSTAP"],projectLink:"https://alokverma20s.github.io/tindog/",codeLink:"https://github.com/alokverma20s/tindog",  imgUrl:images.tinDog},
     {title:'Simon Game', description:'This is JS Game', tags:["JS","Web Game", "HTML"],projectLink:"https://alokverma20s.github.io/Simon-Game/",codeLink:"https://github.com/alokverma20s/Simon-Game",  imgUrl:images.simonGame},

@@ -31,11 +31,22 @@ const Footer = () => {
       email: email,
       message: message,
     };
-
-    client.create(contact).then(() => {
-      setLoading(false);
-      setIsFormSubmitted(true);
-    });
+    fetch("https://bit-bridge.vercel.app/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(contact),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        setLoading(false);
+        setIsFormSubmitted(true);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
 
   return (
